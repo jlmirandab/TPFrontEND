@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Drink, DrinksResponse } from '../../models/product.model';
+import { Drink } from '../../models/product.model';
 import { Cocktail } from '../../servicios/cocktail';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

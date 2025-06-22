@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { Drink, DrinksResponse } from '../../models/product.model';
+import { Drink } from '../../models/product.model';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Cocktail } from '../../servicios/cocktail';

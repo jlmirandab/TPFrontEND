@@ -9,6 +9,3 @@ export interface Drink {
   ingredients: string[]; // Lista de ingredientes usados en el cóctel (ej: ["Tequila","Limon", "Sal"])
 }
 
-export interface DrinksResponse {
-  drinks: Drink[];
-}

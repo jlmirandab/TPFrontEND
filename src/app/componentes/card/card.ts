@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Drink, DrinksResponse } from '../../models/product.model';
+import { Drink } from '../../models/product.model';
 import { Router } from '@angular/router';
 
 @Component({

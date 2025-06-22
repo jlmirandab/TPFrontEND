@@ -1,6 +1,6 @@
 import { Component,OnInit, inject } from '@angular/core';
 import { ActivatedRoute,RouterLink } from '@angular/router';
-import { Drink, DrinksResponse } from '../../models/product.model';
+import { Drink, } from '../../models/product.model';
 import { Cocktail } from '../../servicios/cocktail';
 import { CommonModule } from '@angular/common';
 
