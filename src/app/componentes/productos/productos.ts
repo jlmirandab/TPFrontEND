@@ -21,17 +21,4 @@ export class Productos implements OnInit {
     
     
   }
-
-//*
-//     getTragoID(id: string) {
-//       this.cocktailService.getTragoByID(id).subscribe({
-//         next: (data: any) => {
-//       this.listadeTragos = data;
-//         console.log('Trago por ID:', this.listadeTragos);
-//     },
-//     error: (error: any) => {
-//       console.error('Error buscando trago por ID', error);
-//     }
-//   });
-// }**/
 }

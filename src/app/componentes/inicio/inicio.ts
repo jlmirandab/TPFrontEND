@@ -11,7 +11,7 @@ import { Cocktail } from '../../servicios/cocktail';
   styleUrl: './inicio.css'
 })
 export class Inicio {
-    currentDrink: Drink | null = null;
+  currentDrink: Drink | null = null;
   isLoading = false;
   errorMessage: string | null = null;
   drink: any = null;
@@ -26,7 +26,7 @@ export class Inicio {
         this.isLoading = false;
       },
       error: (err) => {
-        console.error('Error fetching drink:', err);
+        console.error('Error cargando trago:', err);
         this.isLoading = false;
       }
     });
