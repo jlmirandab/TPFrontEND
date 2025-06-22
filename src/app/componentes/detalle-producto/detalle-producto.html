@@ -1,1 +1,33 @@
-<p>detalle-producto works!</p>
+@if (isLoading) {
+  <p>Loading...</p>
+} @else if (drink) {
+  <div class="drink-detail">
+    <h1>{{ drink.strDrink }}</h1>
+    <img [src]="drink.strDrinkThumb" [alt]="drink.strDrink" class="drink-image">
+    
+    <div class="details-grid">
+      <div>
+        <p><strong>Category:</strong> {{ drink.strCategory }}</p>
+        <p><strong>Type:</strong> {{ drink.strAlcoholic }}</p>
+        <p><strong>Glass:</strong> {{ drink.strGlass }}</p>
+      </div>
+      
+      <div>
+        <h3>Ingredients:</h3>
+        <ul>
+          @for (i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; track i) {
+            @if (drink['strIngredient' + i]) {
+              <li>
+                {{ drink['strIngredient' + i] }} 
+                <span *ngIf="drink['strMeasure' + i]">- {{ drink['strMeasure' + i] }}</span>
+              </li>
+            }
+          }
+        </ul>
+      </div>
+    </div>
+
+    <h3>Instructions:</h3>
+    <p>{{ drink.strInstructions }}</p>
+  </div>
+}

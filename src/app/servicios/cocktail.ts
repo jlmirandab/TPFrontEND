@@ -24,4 +24,10 @@ export class Cocktail {
     );
   } 
 
+  getDrinkById(id: string): Observable<any> {
+  return this._httpClient.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`).pipe(
+    map((response: any) => response.drinks ? response.drinks[0] : null)
+  );
+}
+
   } 

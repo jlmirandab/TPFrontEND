@@ -12,7 +12,7 @@ import { Buscador } from '../buscador/buscador';
   styleUrl: './productos.css'
 })
 export class Productos implements OnInit {
- currentDrink: Drink | null = null;  // Inicializada como null
+ currentDrink: Drink | null = null; 
  isLoading: boolean = false;   
   listadeTragos: Drink[]=[];
 

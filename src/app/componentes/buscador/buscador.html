@@ -3,13 +3,13 @@
     type="text" 
     [(ngModel)]="textBuscar" 
     name="textBuscar" 
-    placeholder="Ejemplo: Margarita, Mojito..."
+    placeholder="Example: Margarita, Mojito..."
     class="search-input"
   >
-  <button (click)="buscar()" class="search-button">Buscar</button>
+  <button (click)="buscar()" class="search-button">Search</button>
   
   <p *ngIf="resultado.length === 0 && textBuscar" class="no-results">
-    No se encontró "{{ textBuscar }}"
+    Not found "{{ textBuscar }}"
   </p>
 </div>
 

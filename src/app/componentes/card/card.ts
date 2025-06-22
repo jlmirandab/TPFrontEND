@@ -11,11 +11,11 @@ import { Router } from '@angular/router';
 export class Card {
   
   @Input() item!: Drink;
-  verDetalle(idDrink: string) {
-    console.log('ID del trago:', idDrink);
-    // Aquí puedes:
-    // - Navegar a una ruta detalle
-    // - Abrir un modal
-    // - Llamar a un servicio
+  constructor (private router: Router){
+
   }
+  verDetalle(id: string) {
+    this.router.navigate(['/detalle-producto'], { queryParams: { id: id } });
+  }
+  
 }
