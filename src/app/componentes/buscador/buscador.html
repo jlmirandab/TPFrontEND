@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="textBuscar" name="textBuscar" 
+placeholder="..">
+<button (click)="buscar()">buscar</button>
+<p *ngIf="resultado.length === 0"> no se encontro nada.</p>
+<div class="containerCard">
+<app-card *ngFor="let c of resultado" [item]="c"></app-card>
+</div>
