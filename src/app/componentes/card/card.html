@@ -1,5 +1,7 @@
 <div class="cardsbody">
-    <img [src]="item.strDrinkThumb" alt="" >
-    <h3>{{item.strDrink}}</h3>
-    <p>{{item.idDrink}}</p>
+  <img [src]="item.strDrinkThumb" alt="{{item.strDrink}}">
+  <h3 title="{{item.strDrink}}">{{item.strDrink}}</h3> <!-- Tooltip para nombres largos -->
+  <button type="button" class="btn btn-primary" (click)="verDetalle(item.idDrink)">
+    Ver Detalle
+  </button>
 </div>
