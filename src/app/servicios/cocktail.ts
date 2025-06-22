@@ -9,6 +9,8 @@ import { cocktailModel } from '../models/cocktail.model';
 })
 export class Cocktail {
    private apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail';
+   private apiUrlID= 'https://www.thecocktaildb.com/api/json/v1/1';
+
 
   constructor(private http: HttpClient) {}
 
@@ -17,4 +19,6 @@ export class Cocktail {
       map(response => response.drinks)
     );
   } 
+
+  
 }

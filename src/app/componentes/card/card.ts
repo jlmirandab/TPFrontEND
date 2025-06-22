@@ -8,6 +8,7 @@ import { cocktailModel } from '../../models/cocktail.model';
   styleUrl: './card.css'
 })
 export class Card {
+  
   @Input() item!: cocktailModel;
   verDetalle(idDrink: string) {
     console.log('ID del trago:', idDrink);
