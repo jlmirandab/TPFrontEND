@@ -19,7 +19,9 @@
             @if (drink['strIngredient' + i]) {
               <li>
                 {{ drink['strIngredient' + i] }} 
-                <span *ngIf="drink['strMeasure' + i]">- {{ drink['strMeasure' + i] }}</span>
+                @if (drink['strMeasure' + i]) {
+                  <span>- {{ drink['strMeasure' + i] }}</span>
+                }
               </li>
             }
           }
