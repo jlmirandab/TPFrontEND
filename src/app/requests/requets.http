@@ -1,0 +1,16 @@
+### Buscar por letra
+@api=https://www.thecocktaildb.com/api/json/v1/1
+GET https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a
+
+### Buscar cóctel por nombre
+GET www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+
+### Obtener cóctel aleatorio
+GET www.thecocktaildb.com/api/json/v1/1/random.php
+
+### Buscar por ID
+GET https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
+###
+
+GET {{api}}/random.php
+###

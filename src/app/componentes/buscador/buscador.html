@@ -1,0 +1,18 @@
+<div class="search-section">
+  <input 
+    type="text" 
+    [(ngModel)]="textBuscar" 
+    name="textBuscar" 
+    placeholder="Example: Margarita, Mojito..."
+    class="search-input"
+  >
+  <button (click)="buscar()" class="search-button">Search</button>
+  
+  <p *ngIf="resultado.length === 0 && textBuscar" class="no-results">
+    Not found "{{ textBuscar }}"
+  </p>
+</div>
+
+<div class="containerCard">
+  <app-card *ngFor="let c of resultado" [item]="c"></app-card>
+</div>

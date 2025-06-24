@@ -1,1 +1,51 @@
-<p>inicio works!</p>
+<div class="welcome-section">
+  <div class="welcome-content">
+    <h1>Welcome to Zenith!</h1>
+    <p class="welcome-text">
+      Discover a world of cocktails — from classic favorites to hidden gems. 
+      Browse by category, check ingredients, and find out whether each drink is alcoholic or not. 
+      Whether you're mixing for a party or just exploring, we've got the perfect drink for every occasion.
+    </p>
+  </div>
+  
+<div class="container">
+  <!-- Texto "Sorpresa" arriba -->
+  <h1 class="sorpresa-text">¡Don't touch!</h1>
+
+  <!-- Contenedor del GIF centrado -->
+  <div class="gif-container" (click)="TraerRandomDrink()">
+    <img 
+      src="random.gif" 
+      alt="Click para revelar tu trago"
+      class="sorpresa-gif"
+      [class.disabled]="isLoading"
+    >
+    @if (isLoading) {
+      <div class="loading-overlay">
+        <p>Searching your drink...</p>
+      </div>
+    }
+  </div>
+
+  <!-- Datos del trago (se muestra después del click) -->
+  @if (drink) {
+    <div class="drink-card">
+      <h2>{{ drink.strDrink }}</h2>
+      <img [src]="drink.strDrinkThumb" [alt]="drink.strDrink" width="200">
+      <p><strong>Category:</strong> {{ drink.strCategory }}</p>
+      <p><strong>Type:</strong> {{ drink.strAlcoholic }}</p>
+      
+      <h3>Ingredients:</h3>
+      <ul>
+        @for (i of [1, 2, 3, 4, 5]; track i) {
+          @if (drink['strIngredient' + i]) {
+            <li>{{ drink['strIngredient' + i] }} - {{ drink['strMeasure' + i] || '' }}</li>
+          }
+        }
+      </ul>
+      <h3>Instructions:</h3>
+      <p>{{ drink.strInstructions }}</p>
+    </div>
+  }
+  
+</div>
