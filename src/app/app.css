@@ -2,11 +2,12 @@
   cursor:pointer;
 }
 .logo-navbar {
-  height: 40px; /* Ajustá según la altura de tu navbar */
+  height: 50px; 
   width: auto;
   max-height: 100%;
   display: inline-block;
-  
+    margin-right: 10px;
+  vertical-align: middle;
 }
 .custom-navbar {
   background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* Fondo degradado oscuro */
@@ -26,9 +27,4 @@
   text-decoration: underline;
 }
 
-.logo-navbar {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
-  vertical-align: middle;
-}
+
