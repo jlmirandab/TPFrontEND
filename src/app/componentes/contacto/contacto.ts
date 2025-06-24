@@ -15,7 +15,7 @@ export class Contacto {
 
   enviarFormulario(form : NgForm) {
     console.log("Nombre:" + this.nombre + " Correo: " + this.email + " Mensaje: " + this.mensaje);
-    alert('Formulario enviado con éxito');
+    alert("Message sent successfully submitted successfully");
     form.resetForm();
   }
 }
